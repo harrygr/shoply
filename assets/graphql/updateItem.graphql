@@ -1,0 +1,7 @@
+mutation UpdateItem($id: ID!, $input: ItemInput!) {
+  updateItem(id: $id, input: $input) {
+    id
+    name
+    checkedAt
+  }
+}

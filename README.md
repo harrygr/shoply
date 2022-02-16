@@ -19,9 +19,11 @@ See the [Phoenix installation][phoenix-installation] guide for more detailed ins
 - Check out the repo
 - Install Elixir dependencies with `mix deps.get`
 - Install frontend dependencies with `cd assets && yarn install`
-- Copy `config/dev.secret.template.exs` to `config/dev.secret.exs` ans populate with your environment-specific configuration.
-- Start Phoenix endpoint with `mix phx.server`
+- Copy `config/dev.secret.template.exs` to `config/dev.secret.exs` and populate with your environment-specific configuration.
+- Start the Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+
+EE Version Number: `5b8d0fd276b6d288905ed2f63a934e057e8feca2`
 
 [phoenix-installation]: https://hexdocs.pm/phoenix/installation.html

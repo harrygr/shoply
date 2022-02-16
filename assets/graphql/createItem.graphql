@@ -1,0 +1,7 @@
+mutation CreateItem($input: ItemInput!) {
+  createItem(input: $input) {
+    id
+    name
+    checkedAt
+  }
+}

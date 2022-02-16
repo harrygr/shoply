@@ -18,7 +18,7 @@ defmodule Shoply.Shopping do
 
   """
   def list_items do
-    Repo.all(Item)
+    from(i in Item, order_by: [asc: i.inserted_at]) |> Repo.all()
   end
 
   @doc """

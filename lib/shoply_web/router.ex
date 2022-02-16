@@ -12,6 +12,9 @@ defmodule ShoplyWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+
+    forward "/graphiql", Absinthe.Plug.GraphiQL, schema: ShoplyWeb.Schema
+    forward "/graphql", Absinthe.Plug, schema: ShoplyWeb.Schema
   end
 
   scope "/", ShoplyWeb do
