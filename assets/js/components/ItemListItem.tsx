@@ -44,8 +44,8 @@ export const ItemListItem: React.FC<Props> = ({ item }) => {
   const itemNameInputId = `item-name-${item.id}`;
 
   return (
-    <li>
-      <div className="inline-block w-4 h-4 mr-2">
+    <li className="flex items-center">
+      <div className="inline-flex w-4 h-4 mr-2 items-center justify-center">
         <label htmlFor={itemCheckedInputId} className="sr-only">
           Checked
         </label>
@@ -54,9 +54,10 @@ export const ItemListItem: React.FC<Props> = ({ item }) => {
           type="checkbox"
           checked={!!itemCheckedAt}
           onChange={updateItemChecked}
-          className="cursor-pointer"
+          className="cursor-pointer w-auto"
         />
       </div>
+
       <label htmlFor={itemNameInputId} className="sr-only">
         Item name
       </label>
@@ -66,7 +67,7 @@ export const ItemListItem: React.FC<Props> = ({ item }) => {
         value={itemName}
         onChange={(e) => setItemName(e.target.value)}
         onBlur={updateItemName}
-        className={!!itemCheckedAt ? "line-through" : undefined}
+        className={`${!!itemCheckedAt ? "line-through" : ""} flex-grow mr-2`}
       />
 
       <button onClick={() => deleteItem({ id: item.id })} title="Delete item">

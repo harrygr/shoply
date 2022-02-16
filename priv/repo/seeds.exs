@@ -9,3 +9,10 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+Shoply.Shopping.create_item(%{name: "Add your items to the list"})
+
+Shoply.Shopping.create_item(%{
+  name: "Check things off when you're done with them",
+  checked_at: DateTime.utc_now()
+})
